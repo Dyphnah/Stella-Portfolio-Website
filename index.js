@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
   const message = document.querySelector('#myMessage').value;
   const emailMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
 
-  // Send email using SMTP.js library. I had to google this. not sure it is working.
+  // Send email using SMTP.js library. I had to google this. 
   Email.send({
     Host: 'smtp.gmail.com',
     Username: 'YOUR_GMAIL_ADDRESS',
@@ -40,4 +40,50 @@ form.addEventListener('submit', (e) => {
 });
 
 
- 
+const button = document.querySelector('.main-btn');
+
+button.addEventListener('click', function() {
+  alert("Kindly fill the form on Contact Me section")
+});
+
+
+//fetch request
+
+const baseUrl = 'http://localhost:3000/blog';
+const blogsSection = document.querySelector('.blogs');
+
+
+function fetchNewBlog() {
+fetch(baseUrl)
+  .then(response => response.json())
+  .then(blogs => {
+      blogsSection.innerHTML = '';
+      
+      blogs.forEach(blog => {
+        const blogContainer = document.createElement('div');
+        const img = document.createElement('img');
+        const blogTextElement = document.createElement('div');
+        const title = document.createElement('h4');
+        const content = document.createElement('p');
+
+      blogContainer.className = 'blog';
+      img.src = blog.picture;
+      img.alt = ''; 
+      blogTextElement.className = 'blog-text';
+      title.innerHTML = blog.title;
+      content.innerHTML = blog.content;
+
+      blogTextElement.appendChild(title);
+      blogTextElement.appendChild(content);
+      blogContainer.appendChild(img);
+      blogContainer.appendChild(blogTextElement);
+
+      blogsSection.appendChild(blogContainer);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching blogs:', error);
+  })
+};
+fetchNewBlog()
+
