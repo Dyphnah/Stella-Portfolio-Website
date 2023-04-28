@@ -50,14 +50,14 @@ button.addEventListener('click', function() {
 //fetch request
 
 const baseUrl = 'http://localhost:3000/blog';
-const blogsSection = document.querySelector('.blogs');
+const blogsSection = document.querySelector('#blogs');
 
 
 function fetchNewBlog() {
-fetch(baseUrl)
+fetch("http://localhost:3000/blog")
   .then(response => response.json())
   .then(blogs => {
-      blogsSection.innerHTML = '';
+    blogsSection.innerHTML = '';
       
       blogs.forEach(blog => {
         const blogContainer = document.createElement('div');
