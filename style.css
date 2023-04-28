@@ -23,7 +23,7 @@
   
   .light-mode {
     --color-primary: #FFFFFF;
-    --color-secondary: rgb(25, 212, 25);
+    --color-secondary: rgb(36, 188, 36);
     --color-white: #454e56;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -38,9 +38,36 @@
   body {
     background-color: var(--color-primary);
     font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-white);
     transition: all 0.4s ease-in-out;
+  }
+
+  .btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: inherit;
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+    width: 32%;
+    padding: 20px;
+    background: var(--color-grey-5);
+    margin: auto;
+  }
+  .btn .btn-text {
+    padding: 0 3rem;
+}
+
+  .btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
   }
   
   a {
@@ -68,7 +95,7 @@
   
   .container {
     display: none;
-    transform: translateY(-100%) scale(0);
+    /*transform: translateY(-100%) scale(0);*/
     transition: all 0.4s ease-in-out;
     background-color: var(--color-primary);
   }
@@ -592,6 +619,19 @@
     transform: translateX(0);
     transition: all 0.4s ease-out;
   }
+  .submit-btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 2rem;
+
+  }
   
   .main-title {
     text-align: center;
@@ -857,20 +897,12 @@
     .right-header .name {
       font-size: 2.5rem !important;
       text-align: center;
-      padding-top: 3rem;
+      padding-top: 4rem;
     }
   }
   @media screen and (max-width: 700px) {
     .container {
       padding: 7rem 3rem;
-    }
-  
-    .about-stats .progress-bars {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .about-container .right-about {
-      grid-template-columns: repeat(1, 1fr);
     }
   
     .timeline {
