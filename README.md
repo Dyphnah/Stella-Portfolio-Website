@@ -1,5 +1,3 @@
-# stella.github.io
-
 
 ## Project Name
 Stella Portfolio Website.
@@ -12,7 +10,7 @@ Dyphnah Nyamongo.
 This is a final project to evaluate my HTML, CSS, and Javascript Knowledge as required by Moringa School. 
 For this project, I will design and code a portfolio website. The website will run on a single html file, but I will style it using CSS and add interactivity with Javascript.
 
-The website will be hosted on GitHub. https://github.com/Dyphnah/Stella-Portfolio-Website
+The website will be hosted on GitHub. https://dyphnah.github.io/stella.github.io/
 
 
 ## Motivaton.
@@ -48,7 +46,7 @@ The website is crucial for marketing purposes. It will help authenticate her ser
 1. Images used in this website are from Pixabay ('https://pixabay.com/')
 2. Fonts, Icons and styling referenced in W3 Schools  ("https://www.w3schools.com/howto/howto_css_icon_buttons.asp").
 3. Followed tutorials from YouTube as well as course content.
-4. freeCodeCamp ("https://www.freecodecamp.org/")
+
 
 ## License
 
